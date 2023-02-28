@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Webstore</title>
+</head>
+
+<h1>Welcome to my store</h1>
+<p>page written by <%= @name %></p>
+
+<p><%= link_to "team", "team" %></p>
+<p><%= link_to "blog", "blog" %></p>
+</h2>
+
+<table>
+  <tbody>
+  <% @marketplace.each do |market| %>
+  <tr>
+    <td><%= image_tag market[:img] %> </td>
+    <td><%= market[:name]%></td>
+    <td><%= market[:description]%></td>
+    <td><%= market[:price]%></td>
+    <td><%= market[:quantity]%></td>
+  </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</body>
+</html>

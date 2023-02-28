@@ -1,0 +1,39 @@
+h1 {
+    background: cornflowerblue;
+    font-size: 5em;
+    color: beige;
+    }
+
+  img{
+    width: 200px;
+    height: 200px;
+  }
+    
+  table {
+    text-align: center;
+   }
+   
+   table, th, td {
+       border: 1px solid;
+     }
+
+  h2 {
+    color: #25138a;
+    font-family: Helvetica, 'Open Sans', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  p {
+    color: #25138a;
+    font-family: Helvetica, 'Open Sans', Arial, sans-serif;
+    font-weight: bold;
+  }
