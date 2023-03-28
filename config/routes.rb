@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root "home#index"
   get '/team', to: "home#team"
   get '/blog', to: "home#blog"
+  post '/post', to: "home#post"
+  
 
   
 end

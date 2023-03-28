@@ -11,34 +11,25 @@
        </p>
  
     </body>
-    <h2>Elvis</h2>
-    <p>On the first day of Christmas My true love sent to me A partridge in a pear
-        tree On the second day of Christmas My true love sent to me Two turtle-doves And a
-        partridge in a pear tree On the third day of Christmas My true love sent to me Three
-        French hens Two turtle-doves And a partridge in a pear tree On the fourth day of
-        Christmas My true love sent to me Four calling birds Three French hens Two turtle-doves
-        And a partridge in a pear tree
-    </p>
 
-    <h2>Ricky Bobby</h2>
-    <p> Here's the deal, I'm the best there is. Plain and simple. I wake up in the morning and I piss excellence.
-    </p>
-    <h2>Hizenberg</h2>
-    <p>Who are you talking to right now? Who is it you think you see? Do you know how
-        much I make a year? I mean, even if I told you, you wouldn't believe it. Do you
-        know what would happen if I suddenly decided to stop going into work? A business
-        big enough that it could be listed on the NASDAQ goes belly up. Disappears! It
-        ceases to exist without me. No, you clearly don't know who you're talking to, so let
-        me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door
-        and gets shot and you think that of me? No. I am the one who knocks!
-    </p>
-    <h2>PROF</h2>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-        officia deserunt mollit anim id est laborum."
-    </p>
-</table>
+    <hr>
+    <% @blog.each do |blog| %>
+        <h4> <u> <%= blog.name %> </u>:&emsp;</h4>
+        <p class="blog">
+            <%= blog.post %> 
+        </p>
+    <%end%>
+    <form action= '/post' method = 'POST'>
+        <input name='name' type='text' placeholder='Name'>
+        <input name='post' type='numtextber' placeholder='Write post here'>
+        <input type ='submit'>
+    </form> 
+
+
+
+
+    
+    
+    
+
 </html>

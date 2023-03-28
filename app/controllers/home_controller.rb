@@ -34,44 +34,7 @@ class HomeController < ApplicationController
     ]
     end
 
-    def blog
-        @name = 'Eli Mayberry'
-        @blog = 
-        [
-           {
-            name: 'Elvis',
-            description: 'On the first day of Christmas My true love sent to me A partridge in a pear
-            tree On the second day of Christmas My true love sent to me Two turtle-doves And a
-            partridge in a pear tree On the third day of Christmas My true love sent to me Three
-            French hens Two turtle-doves And a partridge in a pear tree On the fourth day of
-            Christmas My true love sent to me Four calling birds Three French hens Two turtle-doves
-            And a partridge in a pear tree'
-            },
-            {
-                name: 'Ricky Bobby',
-                description: 'Heres the deal, Im the best there is. Plain and simple. I wake up in the morning and I piss excellence.'
-            },
-            {
-                name: 'Hizenberg',
-                description: 'Who are you talking to right now? Who is it you think you see? Do you know how
-                much I make a year? I mean, even if I told you, you wouldnt believe it. Do you
-                know what would happen if I suddenly decided to stop going into work? A business
-                big enough that it could be listed on the NASDAQ goes belly up. Disappears! It
-                ceases to exist without me. No, you clearly dont know who youre talking to, so let
-                me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door
-                and gets shot and you think that of me? No. I am the one who knocks!'
-            },
-            {
-                name: 'PROF',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum.'
-            },
-        ]
-    end
+    
     def team
         @name = "Eli Mayberry"
         @team = 
@@ -94,6 +57,18 @@ class HomeController < ApplicationController
                 description: 'Jerry brings everyone coffee'
             }
         ]
+    end
+
+    def post
+        newpost = Blog.new
+        newpost.name = params[:name]
+        newpost.post = params[:post]
+        newpost.save
+        redirect_to "/blog"
+    end
+
+    def blog
+        @blog = Blog.last(3)
     end
 
 
