@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/team', to: "home#team"
   get '/blog', to: "home#blog"
   post '/post', to: "home#post"
+  post '/marketentry', to: "home#marketentry"
+  get '/admin', to: "home#admin"
   
 
   

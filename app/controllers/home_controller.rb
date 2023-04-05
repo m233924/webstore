@@ -64,6 +64,7 @@ class HomeController < ApplicationController
         newpost.name = params[:name]
         newpost.post = params[:post]
         newpost.save
+        sleep(1)
         redirect_to "/blog"
     end
 
@@ -71,7 +72,21 @@ class HomeController < ApplicationController
         @blog = Blog.last(3)
     end
 
+    def marketentry
+        newpost = Marketplace.new
+        newpost.img = params[:img]
+        newpost.name = params[:name]
+        newpost.description = params[:description]
+        newpost.price = params[:price]
+        newpost.quantity = params[:quantity]
+        newpost.save
+        sleep(3)
+        redirect_to "/admin"
+    end
 
+    def admin
+        @marketentry = Marketplace.all
+    end 
 
 
 

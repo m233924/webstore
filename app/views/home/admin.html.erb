@@ -1,0 +1,38 @@
+<head>
+    <title> Eli Mayberry Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <table>
+    <h1>Admin Page</h1>
+
+    <p><%= link_to "marketplace","/"%></p> 
+    <p><%= link_to "team","/team"%></p> 
+
+</body>
+
+<hr/>
+<ul>
+<% @marketplace.each do |market| %>
+<li><u><%= market.name %></u></li>
+<%end%>
+</ul>
+<hr/>
+<form action= '/marketentry' method = 'POST'>
+
+    <input name='img' type='text' placeholder='img.jpg'>
+    <input name='name' type='text' placeholder='Name'>
+    <input name='description' type='text' placeholder='description'>
+    <input name='price' type='number' placeholder='price'>
+    <input name='quantity' type='number' placeholder='Quanitity'>
+    <input type ='submit'>
+</form> 
+
+<p class="d
+
+
+
+
+
+
+</html>

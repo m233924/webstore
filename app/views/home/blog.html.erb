@@ -12,13 +12,13 @@
  
     </body>
 
-    <hr>
+    <hr/>
+    <ul>
     <% @blog.each do |blog| %>
-        <h4> <u> <%= blog.name %> </u>:&emsp;</h4>
-        <p class="blog">
-            <%= blog.post %> 
-        </p>
+    <li><u><%= blog.name %></u>:&emsp;<%= blog.post %></li>
     <%end%>
+    </ul>
+    <hr/>
     <form action= '/post' method = 'POST'>
         <input name='name' type='text' placeholder='Name'>
         <input name='post' type='numtextber' placeholder='Write post here'>
