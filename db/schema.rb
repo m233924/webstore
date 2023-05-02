@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_132902) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_05_021125) do
   create_table "blogs", force: :cascade do |t|
     t.string "name"
     t.string "post"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "marketplaces", force: :cascade do |t|
+    t.string "img"
+    t.string "name"
+    t.string "description"
+    t.decimal "price"
+    t.decimal "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

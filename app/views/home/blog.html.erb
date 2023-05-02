@@ -8,6 +8,7 @@
         <p>
         <p><%= link_to "marketplace","/"%></p> 
         <p><%= link_to "team","/team"%></p> 
+        <p><%= link_to "products", "products" %></p>
        </p>
  
     </body>
@@ -17,9 +18,11 @@
     <% @blog.each do |blog| %>
     <li><u><%= blog.name %></u>:&emsp;<%= blog.post %></li>
     <%end%>
+    
     </ul>
     <hr/>
     <form action= '/post' method = 'POST'>
+
         <input name='name' type='text' placeholder='Name'>
         <input name='post' type='numtextber' placeholder='Write post here'>
         <input type ='submit'>
